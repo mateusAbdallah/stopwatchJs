@@ -33,3 +33,41 @@ body {
     font-size: 60px;
     font-weight: bold;
 }
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    min-width: 100px;
+}
+
+.separator {
+    padding: 0 10px;
+}
+
+#miliseconds {
+    font-size: 40px;
+    color: #505023;
+}
+
+.buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn {
+    font-size: 25px;
+    padding: 10px;
+    background-color: lightgray;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: black;    
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: antiquewhite;
+}
