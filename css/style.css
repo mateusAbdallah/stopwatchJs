@@ -23,6 +23,13 @@ body {
     height: 100vh;
 }
 
+.container h1 {
+    font-size: 65px;
+    color: black;
+}
+
 .timer {
     display: flex;
+    font-size: 60px;
+    font-weight: bold;
 }
