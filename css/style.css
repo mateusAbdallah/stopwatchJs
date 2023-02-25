@@ -58,6 +58,7 @@ body {
 
 .btn {
     font-size: 25px;
+    font-weight: bold;
     padding: 10px;
     background-color: lightgray;
     cursor: pointer;
@@ -70,4 +71,13 @@ body {
 .btn:hover {
     transform: scale(1.1);
     background-color: antiquewhite;
+}
+
+#startBtn {
+    background-color: burlywood;
+}
+
+#pauseBtn,
+#resumeBtn {
+    display: none;
 }
