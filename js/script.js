@@ -29,9 +29,13 @@ function startTime () {
                 seconds = 0
             }
 
-            minutesEl.textContent = minutes
-            secondsEl.textContent = seconds
+            minutesEl.textContent = formatTime(minutes)
+            secondsEl.textContent = formatTime(seconds)
             milisecondsEl.textContent = miliseconds
         }
     }, 10)
+}
+
+function formatTime(time){
+    return time < 10 ? `0${time}`: time     
 }
