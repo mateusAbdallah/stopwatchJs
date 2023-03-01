@@ -13,6 +13,10 @@ let isPaused = false
 
 
 startBtn.addEventListener("click", startTime)
+pauseBtn.addEventListener("click", pauseTimer)
+resumeBtn.addEventListener("click", resumeTimer)
+resetBtn.addEventListener("click", resetTimer)
+
 
 function startTime () {
     interval = setInterval(() => {
@@ -34,6 +38,37 @@ function startTime () {
             milisecondsEl.textContent = formatMiliseconds(miliseconds)
         }
     }, 10)
+
+    startBtn.style.display = "none"
+    pauseBtn.style.display = "block"
+}
+
+function pauseTimer(){
+    isPaused = true
+    pauseBtn.style.display = "none"
+    resumeBtn.style.display = "block"
+}
+
+function resumeTimer(){
+    isPaused = false
+    pauseBtn.style.display = "block"
+    resumeBtn.style.display = "none"
+}
+
+function resetTimer(){
+    isPaused = false
+    clearInterval(interval)
+    minutes = 0
+    seconds = 0
+    miliseconds = 0
+
+    minutesEl.textContent = "00"
+    secondsEl.textContent = "00"
+    milisecondsEl.textContent = "000"
+
+    startBtn.style.display = "block"
+    pauseBtn.style.display = "none"
+    resumeBtn.style.display = "none"
 }
 
 function formatTime(time){
