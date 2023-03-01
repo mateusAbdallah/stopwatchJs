@@ -31,11 +31,15 @@ function startTime () {
 
             minutesEl.textContent = formatTime(minutes)
             secondsEl.textContent = formatTime(seconds)
-            milisecondsEl.textContent = miliseconds
+            milisecondsEl.textContent = formatMiliseconds(miliseconds)
         }
     }, 10)
 }
 
 function formatTime(time){
     return time < 10 ? `0${time}`: time     
+}
+
+function formatMiliseconds(time){
+        return time < 100 ? `${time}`.padStart(3, "0") : time
 }
